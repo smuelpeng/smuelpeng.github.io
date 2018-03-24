@@ -79,14 +79,17 @@
 
 
 
+<meta name="description" content="caffe是一个C++的函数库，里面有很多关于CNN的函数，也有基于C++库函数的其他语言接口封装实现。 caffe极大促进了神经网络的广泛发展，即使并不理解C++和CNN的同学，在通过对于caffe的不断学习也可以获得很大的提升。 研究生期间对于caffe的不断使用和理解的过程中，深感其影响甚大，随着tensorflow或者pytorch的逐渐普及，caffe渐渐会退出历史舞台，但其设计思路、构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于caffe">
 <meta property="og:url" content="http://yoursite.com/2018/01/13/关于caffe/index.html">
 <meta property="og:site_name" content="Penpen">
+<meta property="og:description" content="caffe是一个C++的函数库，里面有很多关于CNN的函数，也有基于C++库函数的其他语言接口封装实现。 caffe极大促进了神经网络的广泛发展，即使并不理解C++和CNN的同学，在通过对于caffe的不断学习也可以获得很大的提升。 研究生期间对于caffe的不断使用和理解的过程中，深感其影响甚大，随着tensorflow或者pytorch的逐渐普及，caffe渐渐会退出历史舞台，但其设计思路、构">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-15T05:00:04.033Z">
+<meta property="og:updated_time" content="2018-03-24T07:02:14.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于caffe">
+<meta name="twitter:description" content="caffe是一个C++的函数库，里面有很多关于CNN的函数，也有基于C++库函数的其他语言接口封装实现。 caffe极大促进了神经网络的广泛发展，即使并不理解C++和CNN的同学，在通过对于caffe的不断学习也可以获得很大的提升。 研究生期间对于caffe的不断使用和理解的过程中，深感其影响甚大，随着tensorflow或者pytorch的逐渐普及，caffe渐渐会退出历史舞台，但其设计思路、构">
 
 
 
@@ -326,7 +329,15 @@
       
 
       
-        
+        <p>caffe是一个C++的函数库，里面有很多关于CNN的函数，也有基于C++库函数的其他语言接口封装实现。</p>
+<p>caffe极大促进了神经网络的广泛发展，即使并不理解C++和CNN的同学，在通过对于caffe的不断学习也可以获得很大的提升。</p>
+<p>研究生期间对于caffe的不断使用和理解的过程中，深感其影响甚大，随着tensorflow或者pytorch的逐渐普及，caffe渐渐会退出历史舞台，但其设计思路、构建工具和传播方式对以后的软件发展都有着很大的意义。</p>
+<p>设计思路：<br>caffe的关键的设计思路可以分为这样几层：</p>
+<p>底层：内存处理与内存计算</p>
+<p>中层：layer的构建与组合</p>
+<p>高层：网络的应用</p>
+<p>构建工具：<br>caffe的构建很多时候都会困扰着初学者和开发者，caffe的依赖库很多，而且依赖库自身的版本也很多，稍有不慎就会花很多的时间去调整环境，甚至一同操作之后还要落得个重装系统的下场。但其实caffe就是一个C++库，所有适用于C++库的编译方式都可以用于caffe。无论是g++、cmake、还是blade，都可以完成，但综合这么</p>
+
       
     </div>
     
