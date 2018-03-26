@@ -957,7 +957,7 @@
 <li><strong>MSVC和Linux G++对动态库和静态库编译选项不同，如Windows的Addition Path和Linux的LIBRARY_PATH</strong></li>
 <li><strong>运行时加载symbol的路径不同如windows-system32;$PATH和Linux-/lib;$LD_LIBRARY_PATH等</strong></li>
 </ul>
-<p>其次是不同CPU和GPU，由于caffe是计算依赖型库函数，需要使用到如openblas，MKL等向量、矩阵函数计算的加速库，<br>而设备支持的指令集是加速库性能的重要依赖。CPU如AVX，AVX2等超线程指令集，</p>
+<p>其次是不同CPU和GPU，由于caffe是计算依赖型库函数，需要使用到如openblas，MKL等向量、矩阵函数计算的加速库，<br>而设备支持的指令集是加速库性能的重要依赖。CPU中如AVX，AVX2等超线程指令集，</p>
 <p>第一步是编译，可以通过正在代码中设置，如-DUSE_xxx等来选择适合不同系统的代码来使用。</p>
 <p>第二步是链接，不同cpp生成的object可以编到ELF文件中去，但是问题在于</p>
 <p>是通过依赖库如protobuf、openblas等的release源码构建出所有caffe的依赖库。</p>
