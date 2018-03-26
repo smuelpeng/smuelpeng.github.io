@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Penpen">
 <meta property="og:description" content="caffe是一个C++的函数库，里面有很多关于CNN的函数，也有基于C++库函数的其他语言接口封装实现。 caffe极大促进了神经网络的广泛发展，即使并不理解C++和CNN的同学，在通过对于caffe的不断学习也可以获得很大的提升。 研究生期间对于caffe的不断使用和理解的过程中，深感其影响甚大，随着tensorflow或者pytorch的逐渐普及，caffe渐渐会退出历史舞台，但其设计思路、构">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-24T07:02:14.900Z">
+<meta property="og:updated_time" content="2018-03-26T10:49:34.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于caffe">
 <meta name="twitter:description" content="caffe是一个C++的函数库，里面有很多关于CNN的函数，也有基于C++库函数的其他语言接口封装实现。 caffe极大促进了神经网络的广泛发展，即使并不理解C++和CNN的同学，在通过对于caffe的不断学习也可以获得很大的提升。 研究生期间对于caffe的不断使用和理解的过程中，深感其影响甚大，随着tensorflow或者pytorch的逐渐普及，caffe渐渐会退出历史舞台，但其设计思路、构">
@@ -336,7 +336,24 @@
 <p>底层：内存处理与内存计算</p>
 <p>中层：layer的构建与组合</p>
 <p>高层：网络的应用</p>
-<p>构建工具：<br>caffe的构建很多时候都会困扰着初学者和开发者，caffe的依赖库很多，而且依赖库自身的版本也很多，稍有不慎就会花很多的时间去调整环境，甚至一同操作之后还要落得个重装系统的下场。但其实caffe就是一个C++库，所有适用于C++库的编译方式都可以用于caffe。无论是g++、cmake、还是blade，都可以完成，但综合这么</p>
+<p>构建工具：<br>caffe的构建很多时候都会困扰着初学者和开发者，</p>
+<p>对于初学者来说，问题在于caffe的依赖库很多，而且依赖库自身的版本也很多，稍有不慎就会花很多的时间去调整环境，甚至一同操作之后还要落得个重装系统的下场。</p>
+<p>对于开发者而言，caffe就是一个C++库，处理依赖方面和其他的C++函数库并无区别，但存在训练速度到交付前馈速度冗余去除问题。</p>
+<p>caffe的构建涉及从基础编译，到不同平台的优化版本caffe的编译，再到将caffe作为软件系统的一部分。</p>
+<p>caffe的基础编译操作：这里指的基础编译不是官网里的一番sudo或者apt-get。<br>而是需要在各个操作的系统和硬件环境中编译出caffe。因此要考虑的事情就变得很多了。</p>
+<p>首先是操作系统，熟知且有使用价值的操作系统就只有Linux和Windows，程序代码的功能设计并不应当受到操作系统的限制，<br>跨系统C++库构建可以借助于CMake等框架进行编译，但是要注意这两种操作系统之间构建C++程序的方式有所不同</p>
+<ul>
+<li><strong>不同系统之基础库的区别，如time.h-gettimeofday();Windows.h-&gt;pause()等</strong></li>
+<li><strong>MSVC和Linux G++对动态库和静态库编译选项不同，如Windows的Addition Path和Linux的LIBRARY_PATH</strong></li>
+<li><strong>运行时加载symbol的路径不同如windows-system32;$PATH和Linux-/lib;$LD_LIBRARY_PATH等</strong></li>
+</ul>
+<p>其次是不同CPU和GPU，由于caffe是计算依赖型库函数，需要使用到如openblas，MKL等向量、矩阵函数计算的加速库，<br>而设备支持的指令集是加速库性能的重要依赖。CPU如AVX，AVX2等超线程指令集，</p>
+<p>第一步是编译，可以通过正在代码中设置，如-DUSE_xxx等来选择适合不同系统的代码来使用。</p>
+<p>第二步是链接，不同cpp生成的object可以编到ELF文件中去，但是问题在于</p>
+<p>是通过依赖库如protobuf、openblas等的release源码构建出所有caffe的依赖库。</p>
+<p>为了改进和简化caffe的功能，</p>
+<p>所有适用于C++库的编译方式都可以用于caffe。无论是g++、cmake、还是blade，都可以完成。</p>
+<p>对于小成本的使用者，非常希望训练<br>需要便捷开发者来说,git+blade的方式一定是具有诱惑力的。</p>
 
       
     </div>
