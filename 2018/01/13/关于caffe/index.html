@@ -86,10 +86,12 @@
 <meta property="og:site_name" content="Penpen">
 <meta property="og:description" content="##caffe是什么caffe是一个C++的函数库，里面有很多关于CNN的函数，也有基于C++库函数的其他语言接口封装实现。caffe极大促进了神经网络的广泛发展，即使并不理解C++和CNN的同学，在通过对于caffe的不断学习也可以获得很大的提升。 研究生期间对于caffe的不断使用和理解的过程中，深感其影响甚大，随着tensorflow或者pytorch的逐渐普及，caffe渐渐会退出历史舞台">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-27T09:26:22.616Z">
+<meta property="og:image" content="http://yoursite.com/images/blob_machine.png">
+<meta property="og:updated_time" content="2018-03-27T09:51:00.904Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于caffe">
 <meta name="twitter:description" content="##caffe是什么caffe是一个C++的函数库，里面有很多关于CNN的函数，也有基于C++库函数的其他语言接口封装实现。caffe极大促进了神经网络的广泛发展，即使并不理解C++和CNN的同学，在通过对于caffe的不断学习也可以获得很大的提升。 研究生期间对于caffe的不断使用和理解的过程中，深感其影响甚大，随着tensorflow或者pytorch的逐渐普及，caffe渐渐会退出历史舞台">
+<meta name="twitter:image" content="http://yoursite.com/images/blob_machine.png">
 
 
 
@@ -332,7 +334,8 @@
         <p>##caffe是什么<br>caffe是一个C++的函数库，里面有很多关于CNN的函数，也有基于C++库函数的其他语言接口封装实现。<br>caffe极大促进了神经网络的广泛发展，即使并不理解C++和CNN的同学，在通过对于caffe的不断学习也可以获得很大的提升。</p>
 <p>研究生期间对于caffe的不断使用和理解的过程中，深感其影响甚大，随着tensorflow或者pytorch的逐渐普及，caffe渐渐会退出历史舞台，但其设计思路、构建工具和传播方式对以后的软件发展都有着很大的意义。</p>
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-设计思路："><a href="#1-设计思路：" class="headerlink" title="1.设计思路："></a>1.设计思路：</h3><p>caffe的关键的设计思路可以分为这样几层：</p>
-<h4 id="1-1-底层：内存处理与内存计算"><a href="#1-1-底层：内存处理与内存计算" class="headerlink" title="1.1 底层：内存处理与内存计算"></a>1.1 底层：内存处理与内存计算</h4><h4 id="1-2-中层：layer的构建与组合"><a href="#1-2-中层：layer的构建与组合" class="headerlink" title="1.2 中层：layer的构建与组合"></a>1.2 中层：layer的构建与组合</h4><h4 id="1-3-高层：网络的应用"><a href="#1-3-高层：网络的应用" class="headerlink" title="1.3 高层：网络的应用"></a>1.3 高层：网络的应用</h4><h3 id="2-构建工具："><a href="#2-构建工具：" class="headerlink" title="2.构建工具："></a>2.构建工具：</h3><p>caffe的构建很多时候都会困扰着初学者和开发者，</p>
+<h4 id="1-1-底层：内存处理与内存计算"><a href="#1-1-底层：内存处理与内存计算" class="headerlink" title="1.1 底层：内存处理与内存计算"></a>1.1 底层：内存处理与内存计算</h4><p><img src="/images/blob_machine.png" alt="blob_machine">    </p>
+<h4 id="1-2-中层：layer的构建与组合"><a href="#1-2-中层：layer的构建与组合" class="headerlink" title="1.2 中层：layer的构建与组合"></a>1.2 中层：layer的构建与组合</h4><h4 id="1-3-高层：网络的应用"><a href="#1-3-高层：网络的应用" class="headerlink" title="1.3 高层：网络的应用"></a>1.3 高层：网络的应用</h4><h3 id="2-构建工具："><a href="#2-构建工具：" class="headerlink" title="2.构建工具："></a>2.构建工具：</h3><p>caffe的构建很多时候都会困扰着初学者和开发者，</p>
 <p>对于初学者来说，问题在于caffe的依赖库很多，而且依赖库自身的版本也很多，稍有不慎就会花很多的时间去调整环境，甚至一同操作之后还要落得个重装系统的下场。</p>
 <p>对于开发者而言，caffe就是一个C++库，处理依赖方面和其他的C++函数库并无区别，但存在训练速度到交付前馈速度冗余去除问题。</p>
 <p>caffe的构建涉及从基础编译，到不同平台的优化版本caffe的编译，再到将caffe作为软件系统的一部分。</p>
