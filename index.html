@@ -1,1279 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
+<html>
 
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Penpen">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Penpen">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Penpen">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/"/>
-
-
-
-
-
-  <title>Penpen</title>
-  
-
-
-
-
-
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?8a9ac3bdf2c7e67153915afc0d81113c";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
-
-
-
+    <title>Zhipeng Yu</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="keywords" content="Zhipeng Yu">
+    <meta name="description" content="Zhipeng Yu's homepage">
+    <link rel="stylesheet" href="css/jemdoc.css" type="text/css" />
+
+
+    <script>
+        function showPubs(id) {
+            if (id == 0) {
+                document.getElementById('pubs').innerHTML = document.getElementById('pubs_selected').innerHTML;
+                document.getElementById('select0').style = 'text-decoration:underline;color:#000000';
+                document.getElementById('select1').style = '';
+            } else {
+                document.getElementById('pubs').innerHTML = document.getElementById('pubs_by_topic').innerHTML;
+                document.getElementById('select1').style = 'text-decoration:underline;color:#000000';
+                document.getElementById('select0').style = '';
+            }
+        }
+
+    </script>
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
-  
-    
-  
+<body>
 
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Penpen</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle">I want to go home but my love gets me through.</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
+    <div id="layout-content" style="margin-top:25px">
 
 
+        <table>
+            <tbody>
+                <tr>
+                    <td width="75%">
+                        <div id="toptitle">
+                            <h1>Zhipeng Yu 于志鹏<h1>
+                        </div>
 
- </div>
-    </header>
+                        <h3>Ph.D. Student</h3>
 
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
+                        <p>
+                            School of Electronic, Electrical, and Communication Engineering</br>
+                            University of Chinese Academy of Sciences </br>
+                            </br>
+                            Email: yuzhipeng21@mails.ucas.ac.cn </br>
+                        </p>
+                        <p>
+                            <a href="https://github.com/smuelpeng"><img src="assets/logos/github_logo.png"
+                                    height="30px"></a>&nbsp;&nbsp;
+                            <a href="https://scholar.google.com/citations?user=yFI_RjUAAAAJ&hl=zh-CN"><img
+                                    src="assets/logos/google_logo.png" height="30px"></a>&nbsp;&nbsp;
+                        </p>
+                    </td>
 
-  
+                    </td>
+                    <td width="25%">
+                        <img src="assets/imgs/mime.jpg" width="80%" />
+                    </td>
+                <tr>
+            </tbody>
+        </table>
 
-  
-  
-  
+        <h2>Biography</h2>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/19/从人脸识别任务看识别系统的构建/">
+        <p>
+            I am a first-year (2021-now) Ph.D. student in School of Electronic, Electrical, and Communication
+            Engineering, University of Chinese Academy of Sciences, supervised by Qingming Huang (Professor at UCAS,
+            IEEE Fellow). I have closely collaborated with Dr. Yichao Wu and Mr. Ding Liang.
+            My research interests include machine learning and computer vision. I have done related research works on
+            knowledge distillation, face recognition, dynamic neural network and learning with noisy label.
+        <p>
+            I received the B.E. degree in communication engineering and the M.E degree in electrical and communication
+            engineering from
+            the Beijing University of Posts and Telecommunications (BUPT), Beijing, China, in 2015 and 2018,
+            respectively.
+        <p>
+            I worked at SenseTime as senior researcher(2018-2021).
+        </p>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Penpen/yuzhipeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
+        <p id="publications">
+        <h2>Publications
+            <!--(<a href="" id="select0" onclick="showPubs(0); return false;">By year</a> /
+     <a href="" id="select1" onclick="showPubs(1); return false;">By topic</a>)-->
+        </h2>
+        </p>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Penpen">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/19/从人脸识别任务看识别系统的构建/" itemprop="url">从人脸识别任务看识别系统的构建</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-19T21:46:12+08:00">
-                2018-01-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>做人脸识别的任务也已经有很一段时间了，但始终有着这样的感觉，这个任务是没有尽头的。</p>
-<p>首先是速度和准确性之间的平衡：</p>
-<p>准确率的测量是一个符合bias-variance trade-off的变量，所以<br>速度和准确率之间的关系颇微妙。<br>实际使用中，一般的工程上的做法是根据固定任务在现有已经证明有效的算法为基础，构建同一算法框架下模型参数量（NumW）、filter组合复杂度（Cpl）与速度（speed）、模型准确度效果（acc）之间排列组合分布的分布点，然后通过根据分布点做拟合曲线，通过求解和预测模型组和的最优点以此为基础进行训练和验证。</p>
-<p>这样的做法看上去耗时耗力，却是真正的行之有效，存在的困难有这么几点：<br>1.</p>
-<p>从开始的限制场景下的人脸识别，到自然场景下的人脸识别，到复杂场景的人脸识别，<br>这个任务其实经历着实验室阶段的探索，实际大规模场景的使用，到高端产品高成本化的过程。<br>而作为技术人员，往往身在其中，不知其味，总是艰苦地想着如何能够这一场景的算法性能，而可能忽略了当前算法与任务之间的增长曲线。</p>
-<p>算法的一般承受能力和任务场景的匹配程度也具有着一定的曲线关系。</p>
-<p>那么问题来了，如何通过这种的性能曲线改善算法的适配程度呢？</p>
-<p>假设一个简单的人脸二分类问题：</p>
-<p>那么我们知道，</p>
-<p>正确匹配的方式，</p>
-<p>目前看来，应该没有人会怀疑神经网络算法相比于传统一些简单特征的技术更加优秀，但神经网络依然不是万能的，经常存在着准确率不够优秀的情况，这固然和训练数据、网络结构有着一定的关系，但是同样也需要认识到算法本身的特征提取能力，，</p>
-<p>而在神经网络的算法中，resnet的效果一般要好于没有block的结构，而带BatchNorm的网络结构往往又好于没有BN的结构，这戏都是非常具有创意的改进，是算法的进化过程。</p>
-<p>算法的使用效果同样需要依赖于任务场景的曲线。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
+        <div id="pubs"></div>
+        <script id="pubs_selected">
+            <ul>
 
 
-    
-      
+                <li>
+                    Pay Attention to Your Positive Pairs: Positive Pair Aware Contrastive Knowledge Distillation</br>
+                <b>Zhipeng Yu</b>, Qianqian Xu, Yangbangyan Jiang, Haoyu Qin, Qingming Huang</br>
+        ACM International Conference on Multimedia(<b>ACM MM</b>), 2022 </br >
+                <p></p>
+    </li >
 
-  
 
-  
-  
-  
+                <li>
+                    OneFace: One Threshold for All</br>
+        Jiaheng Liu, <b>Zhipeng Yu</b>, Haoyu Qin, Yichao Wu, Ding Liang, Gangming Zhao, Ke Xu</br >
+                European Conference on Computer Vision(<b>ECCV</b>), 2022 </br >
+                    <p></p>
+    </li >
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/关于神经网络的加速/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Penpen/yuzhipeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
+                <li>
+                    Action Recognition with Motion Diversification and Dynamic Selection</br>
+        Peiqin Zhuang, Yu Guo, <b>Zhipeng Yu</b>, Luping Zhou, Lei Bai, Ding Liang, Zhiyong Wang, Yali Wang, Wanli Ouyang</br >
+                IEEE Transactions on Image Processing(<b>TIP</b>), 2022 </br >
+                    <p></p>
+        </li >
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Penpen">
-    </span>
+                <li>
+                    Online knowledge distillation via collaborative learning</br>
+        Qiushan Guo, Xinjiang Wang, Yichao Wu, <b>Zhipeng Yu</b>, Ding Liang, Xiaolin Hu, Ping Luo</br >
+                IEEE Conference on Computer Vision and Pattern Recognition(<b>CVPR</b>), 2020,</br >
+                    [<a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Guo_Online_Knowledge_Distillation_via_Collaborative_Learning_CVPR_2020_paper.pdf">PDF</a>]
+                    <p></p >
+    </li >
 
-    
-      <header class="post-header">
+                <li>
+                    Dynamic recursive neural network</br>
+        Qiushan Guo, <b>Zhipeng Yu</b>, Yichao Wu, Ding Liang, Haoyu Qin, Junjie Yan</br >
+                IEEE Conference on Computer Vision and Pattern Recognition(<b>CVPR</b>), 2019,</br >
+                    [<a href="http://openaccess.thecvf.com/content_CVPR_2019/papers/Guo_Dynamic_Recursive_Neural_Network_CVPR_2019_paper.pdf">PDF</a>]
+                    <p></p >
+    </li >
+
+</ul >
+        </script>
+
+        <script>showPubs(0);</script>
+        <script>var scroll = new SmoothScroll('a[href*="#"]', { speed: 1000 });</script>
+
+
+        <h2>Honors</h2>
+
+        <ul>
+            <li>
+                ICCV2021-MFR --The 1nd Place of  ICCV2021-MFR MS1M Track
+            </li>
+        </ul>
+
+
+        <!-- <h2>Academic Service</h2> -->
+
+        <!-- <ul> -->
+            <!-- <li> -->
+                <!-- Conference Reviewer</br> -->
+                <!-- CVPR 2020, AAAI 2021, CVPR 2021, ICCV 2021, CVPR 2022, AAAI 2022, ECCV 2022</br> -->
+            <!-- </li> -->
+
+            <!-- <li> -->
+                <!-- Journal Reviewer</br> -->
+                <!-- IJCV, CSUR</br> -->
+                <!-- Journal of Visual Communication and Image Representation</br> -->
+            <!-- </li> -->
+        <!-- </ul> -->
 
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/13/关于神经网络的加速/" itemprop="url">关于神经网络的加速</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T21:57:36+08:00">
-                2018-01-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/关于物体检测/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Penpen/yuzhipeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Penpen">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/13/关于物体检测/" itemprop="url">关于物体检测</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T21:56:42+08:00">
-                2018-01-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/关于人脸识别/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Penpen/yuzhipeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Penpen">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/13/关于人脸识别/" itemprop="url">关于人脸识别</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T21:56:26+08:00">
-                2018-01-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/关于人脸检测/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Penpen/yuzhipeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Penpen">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/13/关于人脸检测/" itemprop="url">关于人脸检测</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T21:56:19+08:00">
-                2018-01-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>人脸检测</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/13/关于caffe/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Penpen/yuzhipeng">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Penpen">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/01/13/关于caffe/" itemprop="url">关于caffe</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-13T21:56:06+08:00">
-                2018-01-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>##caffe是什么<br>caffe是一个C++的函数库，里面有很多关于CNN的函数，也有基于C++库函数的其他语言接口封装实现。<br>caffe极大促进了神经网络的广泛发展，即使并不理解C++和CNN的同学，在通过对于caffe的不断学习也可以获得很大的提升。</p>
-<p>研究生期间对于caffe的不断使用和理解的过程中，深感其影响甚大，随着tensorflow或者pytorch的逐渐普及，caffe渐渐会退出历史舞台，但其设计思路、构建工具和传播方式对以后的软件发展都有着很大的意义。</p>
-<h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><h3 id="1-设计思路："><a href="#1-设计思路：" class="headerlink" title="1.设计思路："></a>1.设计思路：</h3><p>caffe的关键的设计思路可以分为这样几层：</p>
-<h4 id="1-1-底层：内存处理与内存计算"><a href="#1-1-底层：内存处理与内存计算" class="headerlink" title="1.1 底层：内存处理与内存计算"></a>1.1 底层：内存处理与内存计算</h4><p><img src="/images/blob_machine.png" alt="blob_machine">    </p>
-<h4 id="1-2-中层：layer的构建与组合"><a href="#1-2-中层：layer的构建与组合" class="headerlink" title="1.2 中层：layer的构建与组合"></a>1.2 中层：layer的构建与组合</h4><h4 id="1-3-高层：网络的应用"><a href="#1-3-高层：网络的应用" class="headerlink" title="1.3 高层：网络的应用"></a>1.3 高层：网络的应用</h4><h3 id="2-构建工具："><a href="#2-构建工具：" class="headerlink" title="2.构建工具："></a>2.构建工具：</h3><p>caffe的构建很多时候都会困扰着初学者和开发者，</p>
-<p>对于初学者来说，问题在于caffe的依赖库很多，而且依赖库自身的版本也很多，稍有不慎就会花很多的时间去调整环境，甚至一同操作之后还要落得个重装系统的下场。</p>
-<p>对于开发者而言，caffe就是一个C++库，处理依赖方面和其他的C++函数库并无区别，但存在训练速度到交付前馈速度冗余去除问题。</p>
-<p>caffe的构建涉及从基础编译，到不同平台的优化版本caffe的编译，再到将caffe作为软件系统的一部分。</p>
-<p>caffe的基础编译操作：<br>这里指的基础编译不是官网里的一番sudo或者apt-get。<br>而是需要在各个操作的系统和硬件环境中编译出caffe。因此要考虑的事情就变得很多了。</p>
-<p>首先是操作系统，熟知且有使用价值的操作系统就只有Linux和Windows，程序代码的功能设计并不应当受到操作系统的限制，<br>跨系统C++库构建可以借助于CMake等框架进行编译，但是要注意这两种操作系统之间构建C++程序的方式有所不同</p>
-<ul>
-<li><strong>不同系统之基础库的区别，如time.h-gettimeofday();Windows.h-&gt;pause()等</strong></li>
-<li><strong>MSVC和Linux G++对动态库和静态库编译选项不同，如Windows的Addition Path和Linux的LIBRARY_PATH</strong></li>
-<li><strong>运行时加载symbol的路径不同如windows-system32;$PATH和Linux-/lib;$LD_LIBRARY_PATH等</strong></li>
-</ul>
-<p>其次是CPU的兼容，由于CNN是计算依赖型的任务，需要使用到如openblas，MKL等线性代数加速库，<br>而这些加速库也依赖于CPU支持的指令集，如SSE，AVX，AVX2等超线程指令集，加速库在编译时就确定使用哪些指令集，<br>但是如果实际使用中遇到了和编译时不同的cpu平台，那么就可能会出现一定的问题。</p>
-<p>GPU同样存在类似的问题，Cudnn是很关键的显卡CNN加速库，Cudnn的架构依赖也就决定了对GPU的依赖。</p>
-<p>依赖库的版本同样是一个很繁琐的问题，如果编译或者运行环境中，存在不同版本的protobuf，那么很大概率会发生，<br>无法解析prototxt的事情发生。如果存在不同版本的glog和gflags，那么可能存在glog无法编译的现象。</p>
-<p>编译时软连接依赖，运行时却需要带版本号的依赖库，比如很多时候会发生这样的情况：编译的时候使用-lxxx,<br>需要将libxxx.so加入编译路径，但运行时会提示xxx.bin 需要libxxx.so.<em>.</em>，简单的将libxxx.so拷贝就可以，但是这真的很烦</p>
-<p>解决这些问题其实并不难，贵在高效简洁处理。<br>第一步是编译阶段</p>
-<ul>
-<li>通过代码中设置definition，如-DUSE_xxx等来选择适合不同系统的代码来使用。</li>
-<li>了解第三方库的使用，<a href="https://my.oschina.net/xianyi/blog/101897" target="_blank" rel="noopener">openblas的编译选项</a></li>
-</ul>
-<p>第二步是链接，</p>
-<ul>
-<li>不同cpp生成的object可以编到ELF文件中去，</li>
-<li>Cmake种使用link_directories来包含需要连接的第三方库</li>
-</ul>
-<p>第三步是链接到可执行文件</p>
-<p>第四步是运行时加载</p>
-<p>对于小成本的使用者，非常希望训练</p>
-<p>需要便捷开发者来说,git+blade的方式一定是具有诱惑力的。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">Penpen/yuzhipeng</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-
-      
+        <table width="100%">
+            <tr>
+                <td align="center">&copy; Zhipeng Yu</td>
+            </tr>
+        </table>
 
     </div>
-  </aside>
 
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Penpen/yuzhipeng</span>
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
-  </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
 
 </body>
+
 </html>
